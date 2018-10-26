@@ -1,5 +1,6 @@
 package com.kodilla.testing.collection;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,22 +18,42 @@ public class CollectionTestSuite {
     }
     @Test
     public void testOddNumbersExterminatorEmptyList() {
-        ArrayList<Integer> myList3 = new ArrayList<>();
-        System.out.println("This is a list of all my numbers: " + myList3 + ".");
+        //Given
+        ArrayList<Integer> myNumbersList3 = new ArrayList<>();
+        ArrayList<Integer> myEvenNumbersList3 = new ArrayList<>();
+
+        //When
         OddNumbersExterminator exterminator3 = new OddNumbersExterminator();
-        exterminator3.exterminate(myList3);
-        System.out.println("This is a list of all my even numbers: " + exterminator3.getEvenNumbers() + ".");
+        exterminator3.exterminate(myNumbersList3);
+        System.out.println("Testing empty list of numbers...");
+
+        //Then
+        Assert.assertEquals(myEvenNumbersList3, exterminator3.getEvenNumbers());
     }
     @Test
     public void testOddNumbersExterminatorNormalList() {
-        ArrayList<Integer> myList2 = new ArrayList<>();
-        Random theGenerator = new Random();
-        for(int n=0; n < 20; n++) {
-            myList2.add(theGenerator.nextInt(20));
-        }
-        System.out.println("This is a list of all my numbers: " + myList2 + ".");
+        //Given
+        ArrayList<Integer> myNumbersList2 = new ArrayList<>();
+        myNumbersList2.add(0);
+        myNumbersList2.add(1);
+        myNumbersList2.add(2);
+        myNumbersList2.add(3);
+        myNumbersList2.add(4);
+        myNumbersList2.add(5);
+        myNumbersList2.add(6);
+        myNumbersList2.add(7);
+
+        ArrayList<Integer> myEvenNumbersList2 = new ArrayList<>();
+        myEvenNumbersList2.add(2);
+        myEvenNumbersList2.add(4);
+        myEvenNumbersList2.add(6);
+
+        //When
         OddNumbersExterminator exterminator2 = new OddNumbersExterminator();
-        exterminator2.exterminate(myList2);
-        System.out.println("This is a list of all my even numbers: " + exterminator2.getEvenNumbers() + ".");
+        exterminator2.exterminate(myNumbersList2);
+        System.out.println("Testing non-empty list of numbers...");
+
+        //Then
+        Assert.assertEquals(myEvenNumbersList2, exterminator2.getEvenNumbers());
     }
 }
