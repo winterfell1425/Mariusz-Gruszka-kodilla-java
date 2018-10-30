@@ -30,7 +30,7 @@ public class StatisticsComputationTestSuite {
         //Then
         Assert.assertEquals(0, statisticsComputation.getAveNumOfPostPerUser(), 0.001);
         Assert.assertEquals(2.5, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
-        Assert.assertEquals(Infinity, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
+        Assert.assertEquals(0, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
     @Test
     public void testStatisticsComputation1000Posts() {
@@ -135,8 +135,8 @@ public class StatisticsComputationTestSuite {
         statisticsComputation.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(Infinity, statisticsComputation.getAveNumOfPostPerUser(), 0.001);
-        Assert.assertEquals(Infinity, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
+        Assert.assertEquals(0, statisticsComputation.getAveNumOfPostPerUser(), 0.001);
+        Assert.assertEquals(0, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
         Assert.assertEquals(0.1, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
     @Test

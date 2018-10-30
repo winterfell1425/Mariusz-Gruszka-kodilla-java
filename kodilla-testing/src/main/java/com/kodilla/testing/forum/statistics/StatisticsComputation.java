@@ -17,12 +17,18 @@ public class StatisticsComputation {
         commentsCount = statistics.commentsCount();
 
         aveNumOfPostPerUser = (double) statistics.postsCount() / statistics.usersNames().size();
-
+        if (statistics.usersNames().size() == 0.0) {
+            aveNumOfPostPerUser = 0;
+        }
         aveNumOfCommPerUser = (double) statistics.commentsCount() / statistics.usersNames().size();
-
+        if (statistics.usersNames().size() == 0.0) {
+            aveNumOfCommPerUser = 0;
+        }
         aveNumOfCommPerPost = (double) statistics.commentsCount() / statistics.postsCount();
+        if (statistics.postsCount() == 0.0) {
+            aveNumOfCommPerPost  = 0;
+        }
     }
-
     public int getUsersCount() {
         return usersCount;
     }
