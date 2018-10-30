@@ -17,6 +17,9 @@ public class ShapeCollector {
             result = true;
         }
         return result;
+
+        //myShapes.remove(shape);
+        //return myShapes.remove(shape);
     }
 
     Shape getFigure(int n){
