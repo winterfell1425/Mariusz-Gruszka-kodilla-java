@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -87,5 +86,34 @@ public class BookDirectoryTestSuite {
         // Then
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
+    }
+    @Test
+    public void testListBooksInHandsOf()
+    {
+        // Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> resultListOf0Books = new ArrayList<Book>();
+        List<Book> resultListOf1Book = generateListOfNBooks(1);
+        List<Book> resultListOf5Books = generateListOfNBooks(5);
+        LibraryUser libraryUser1 = new LibraryUser("Jan", "Kowalski", "11111111111");
+        LibraryUser libraryUser2 = new LibraryUser("Anna", "Nowak", "22222222222");
+        LibraryUser libraryUser3 = new LibraryUser( "Katarzyna", "Białas", "33333333333");
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser1))
+                .thenReturn(resultListOf0Books);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser2))
+                .thenReturn(resultListOf1Book);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser3))
+                .thenReturn(resultListOf5Books);
+
+        // When
+        List<Book> theListOfBooks0 = bookLibrary.listBooksInHandsOf(libraryUser1);
+        List<Book> theListOfBooks1 = bookLibrary.listBooksInHandsOf(libraryUser2);
+        List<Book> theListOfBooks5 = bookLibrary.listBooksInHandsOf(libraryUser3);
+
+        // Then
+        assertEquals(0, theListOfBooks0.size());
+        assertEquals(1, theListOfBooks1.size());
+        assertEquals(5, theListOfBooks5.size());
     }
 }
