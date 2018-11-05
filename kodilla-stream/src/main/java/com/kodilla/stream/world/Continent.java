@@ -20,5 +20,13 @@ public final class Continent {
     public List<Country> getCountries() {
         return countries;
     }
+
+    @Override
+    public String toString() {
+        return "Continent{" +
+                "continentName='" + continentName + '\'' +
+                ", countries=" + countries +
+                '}';
+    }
 }
 
