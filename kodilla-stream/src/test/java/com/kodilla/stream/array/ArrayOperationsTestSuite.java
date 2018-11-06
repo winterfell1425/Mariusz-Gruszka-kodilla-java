@@ -1,9 +1,7 @@
-package com.kodilla.stream;
+package com.kodilla.stream.array;
 
-import com.kodilla.stream.array.ArrayOperations;
 import org.junit.Assert;
 import org.junit.Test;
-
 
 public class ArrayOperationsTestSuite {
     @Test
@@ -31,9 +29,6 @@ public class ArrayOperationsTestSuite {
 
         //When
         ArrayOperations.getAverage(numbers);
-
-
-
 
         //Then
         Assert.assertEquals(8.5, ArrayOperations.getAverage(numbers),0.001);
