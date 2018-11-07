@@ -30,9 +30,9 @@ public class ArrayOperationsTestSuite {
         numbers[19] = 20;
 
         //When
-        ArrayOperations.getAverage(numbers);
+        double avg = ArrayOperations.getAverage(numbers);
 
         //Then
-        Assert.assertEquals(10.5, ArrayOperations.getAverage(numbers),0.001);
+        Assert.assertEquals(10.5, avg,0.001);
     }
 }
