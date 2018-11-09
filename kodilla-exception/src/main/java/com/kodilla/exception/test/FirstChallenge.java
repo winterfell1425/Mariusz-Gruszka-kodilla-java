@@ -17,9 +17,9 @@ public class FirstChallenge {
     public static void main(String[] args) {
 
         try {
-        FirstChallenge firstChallenge = new FirstChallenge();
-        double result = firstChallenge.divide(3, 0);
-        System.out.println(result);
+            FirstChallenge firstChallenge = new FirstChallenge();
+            double result = firstChallenge.divide(3, 0);
+            System.out.println(result);
         } catch (Exception e) {
             System.out.println("You've used zero as a divisor!!!");
         } finally {
