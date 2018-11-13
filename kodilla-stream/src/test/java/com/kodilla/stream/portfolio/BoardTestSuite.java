@@ -153,8 +153,8 @@ import static java.util.stream.Collectors.toList;
             int daysCount = project.getTaskLists().stream()
                     .filter(averageTimeOfInProgressTasks::contains)
                     .flatMap(tl -> tl.getTasks().stream())
-                    .map(t -> t.getCreated())
-                    .sum(Period.between(s.gerLocalDate.now()).getDays());
+                    .map(t -> t.getCreated());
+                 //   .sum(Period.between(.gerLocalDate.now()).getDays());
             //.sum();
             System.out.println(daysCount);
 
