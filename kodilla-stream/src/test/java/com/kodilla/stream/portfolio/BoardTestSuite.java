@@ -150,13 +150,14 @@ import static java.util.stream.Collectors.toList;
                     .flatMap(tl -> tl.getTasks().stream())
                     .count();
             System.out.println(tasksCount);
-            int daysCount = project.getTaskLists().stream()
-                    .filter(averageTimeOfInProgressTasks::contains)
-                    .flatMap(tl -> tl.getTasks().stream())
-                    .map(t -> t.getCreated());
-                 //   .sum(Period.between(.gerLocalDate.now()).getDays());
-            //.sum();
-            System.out.println(daysCount);
+           // long  daysCount = project.getTaskLists().stream()
+                  //  .filter(averageTimeOfInProgressTasks::contains)
+                    //.flatMap(tl -> tl.getTasks().stream())
+                    //.map(t -> t.getCreated())
+                    //.mapToLong(ld->Period.between(LocalDate.),(LocalDate.now()).getDays()
+                    //.mapToLong(ld ->ld.until((LocalDate.now()).getDays());
+                    //.sum();
+           // System.out.println(daysCount);
 
 
         }
