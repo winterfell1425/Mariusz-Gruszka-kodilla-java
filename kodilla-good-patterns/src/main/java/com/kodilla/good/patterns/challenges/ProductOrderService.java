@@ -13,15 +13,15 @@ public class ProductOrderService {
         this.orderRepository = orderRepository;
     }
 
-    public OrderDto process(final OrderProduct orderProduct) {
-        boolean isOrdered = orderService.order(orderProduct.getUser(), orderProduct.getDateOfOrder(), orderProduct.getProduct());
+    public OrderDto process(final OrderData orderData) {
+        boolean isOrdered = orderService.order(orderData.getUser(), orderData.getDateOfOrder(), orderData.getProduct());
 
         if(isOrdered) {
-            informationService.inform(orderProduct.getUser());
-            orderRepository.createOrderRepository(orderProduct.getUser(),orderProduct.getDateOfOrder(), orderProduct.getProduct());
-            return new OrderDto(orderProduct.getUser(), true);
+            informationService.inform(orderData.getUser());
+            orderRepository.createOrderRepository(orderData.getUser(),orderData.getDateOfOrder(), orderData.getProduct());
+            return new OrderDto(orderData.getUser(), true);
         } else {
-            return new OrderDto(orderProduct.getUser(), false);
+            return new OrderDto(orderData.getUser(), false);
         }
     }
 }

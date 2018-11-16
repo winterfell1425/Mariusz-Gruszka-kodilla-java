@@ -2,16 +2,13 @@ package com.kodilla.good.patterns.challenges;
 
 import java.time.*;
 
-import java.time.LocalDate;
-import java.util.Objects;
-
-public class OrderProduct {
+public class OrderData {
 
     private User user;
     private LocalDateTime dateOfOrder;
     private Product product;
 
-    public OrderProduct(final User user, final LocalDateTime dateOfOrder, final Product product) {
+    public OrderData(final User user, final LocalDateTime dateOfOrder, final Product product) {
         this.user = user;
         this.dateOfOrder = dateOfOrder;
         this.product = product;
