@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,13 +10,15 @@ import java.util.Random;
 
 public class CollectionTestSuite {
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
+
     @After
     public void after() {
         System.out.println("Test Case: end");
     }
+
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         //Given
@@ -30,6 +33,7 @@ public class CollectionTestSuite {
         //Then
         Assert.assertEquals(myEvenNumbersList3, exterminator3.getEvenNumbers());
     }
+
     @Test
     public void testOddNumbersExterminatorNormalList() {
         //Given

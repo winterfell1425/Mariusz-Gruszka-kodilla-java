@@ -11,6 +11,7 @@ public class OrderRetriever {
 
         return new OrderData(shop1, foodstuff1, quantity1);
     }
+
     public OrderData retrieveMeat() {
         Shop shop2 = new Shop("ButcherShop");
 
@@ -20,6 +21,7 @@ public class OrderRetriever {
 
         return new OrderData(shop2, foodstuff2, quantity2);
     }
+
     public OrderData retrieveCheese() {
         Shop shop3 = new Shop("CheeseShop");
 

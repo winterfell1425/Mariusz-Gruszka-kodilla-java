@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import java.util.*;
 import java.lang.*;
 
@@ -8,7 +9,7 @@ public class OddNumbersExterminator {
 
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
         Iterator<Integer> iterator = numbers.iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             Integer number;
             number = iterator.next();
             if ((number != 0) && ((number % 2) == 0)) {
@@ -17,6 +18,7 @@ public class OddNumbersExterminator {
         }
         return evenNumbers;
     }
+
     public ArrayList<Integer> getEvenNumbers() {
         return evenNumbers;
     }

@@ -20,6 +20,7 @@ public class ShapeCollectorTestSuite {
         testCounter++;
         System.out.println("Preparing to execute test #" + testCounter);
     }
+
     @Test
     public void testAddFigure() {
         //Given
@@ -32,6 +33,7 @@ public class ShapeCollectorTestSuite {
         //Then
         Assert.assertEquals(1, shapeCollector.myShapes.size());
     }
+
     @Test
     public void testRemoveFigure() {
         //Given
@@ -45,6 +47,7 @@ public class ShapeCollectorTestSuite {
         //Then
         Assert.assertEquals(0, shapeCollector.myShapes.size());
     }
+
     @Test
     public void testGetFigure() {
         //Given
@@ -61,24 +64,24 @@ public class ShapeCollectorTestSuite {
     }
     //@Test
     //public void testOtherMethods() {
-        //Given
-        //ShapeCollector shapeCollector = new ShapeCollector();
-        //Shape circle = new Circle("circle", 20.0);
-        //Shape square = new Square("square", 21.0);
-        //Shape triangle = new Triangle("triangle", 22.0);
-        //shapeCollector.addFigure(circle);
-        //shapeCollector.addFigure(square);
-        //shapeCollector.addFigure(triangle);
+    //Given
+    //ShapeCollector shapeCollector = new ShapeCollector();
+    //Shape circle = new Circle("circle", 20.0);
+    //Shape square = new Square("square", 21.0);
+    //Shape triangle = new Triangle("triangle", 22.0);
+    //shapeCollector.addFigure(circle);
+    //shapeCollector.addFigure(square);
+    //shapeCollector.addFigure(triangle);
 
-        //System.out.println(shapeCollector.myShapes);
+    //System.out.println(shapeCollector.myShapes);
 
-        //circle.getShapeName();
-        //circle.getField();
-        //square.getShapeName();
-        //square.getField();
-        //triangle.getShapeName();
-        //triangle.getField();
+    //circle.getShapeName();
+    //circle.getField();
+    //square.getShapeName();
+    //square.getField();
+    //triangle.getShapeName();
+    //triangle.getField();
 
-        //shapeCollector.showFigures();
+    //shapeCollector.showFigures();
     //}
 }

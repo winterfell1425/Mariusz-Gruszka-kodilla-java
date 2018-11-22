@@ -6,8 +6,8 @@ public class ShopIntegrationService {
     private ShopCreator shopCreator;
 
     public ShopIntegrationService(final InformationService informationService,
-                                   final OrderService orderService,
-                                   final ShopCreator shopCreator) {
+                                  final OrderService orderService,
+                                  final ShopCreator shopCreator) {
         this.informationService = informationService;
         this.orderService = orderService;
         this.shopCreator = shopCreator;
@@ -16,7 +16,7 @@ public class ShopIntegrationService {
     public OrderDto fullfil(final OrderData orderData) {
         boolean isOrdered = orderService.order(orderData.getShop(), orderData.getFoodstuff(), orderData.getQuantity());
 
-        if(isOrdered) {
+        if (isOrdered) {
             shopCreator.process();
             informationService.inform(orderData.getShop());
             return new OrderDto(orderData.getShop(), true);

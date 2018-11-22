@@ -1,9 +1,9 @@
 package com.kodilla.good.patterns.food2door;
 
 public class Application {
-    public static void main (String[]args){
+    public static void main(String[] args) {
         OrderRetriever orderRetriever = new OrderRetriever();
-        OrderData orderData1= orderRetriever.retrieveMilk();
+        OrderData orderData1 = orderRetriever.retrieveMilk();
         OrderData orderData2 = orderRetriever.retrieveMeat();
         OrderData orderData3 = orderRetriever.retrieveCheese();
 

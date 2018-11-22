@@ -26,9 +26,10 @@ public class StatisticsComputation {
         }
         aveNumOfCommPerPost = (double) statistics.commentsCount() / statistics.postsCount();
         if (statistics.postsCount() == 0.0) {
-            aveNumOfCommPerPost  = 0;
+            aveNumOfCommPerPost = 0;
         }
     }
+
     public int getUsersCount() {
         return usersCount;
     }

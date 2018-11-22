@@ -32,6 +32,7 @@ public class StatisticsComputationTestSuite {
         Assert.assertEquals(2.5, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
         Assert.assertEquals(0, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
+
     @Test
     public void testStatisticsComputation1000Posts() {
 
@@ -55,6 +56,7 @@ public class StatisticsComputationTestSuite {
         Assert.assertEquals(5, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
         Assert.assertEquals(0.02, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
+
     @Test
     public void testStatisticsComputationZeroComments() {
 
@@ -78,6 +80,7 @@ public class StatisticsComputationTestSuite {
         Assert.assertEquals(0, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
         Assert.assertEquals(0, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
+
     @Test
     public void testStatisticsComputationCommLessThanPosts() {
 
@@ -95,10 +98,11 @@ public class StatisticsComputationTestSuite {
         statisticsComputation.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(5,statisticsComputation.getAveNumOfPostPerUser(), 0.001);
-        Assert.assertEquals(2.5,statisticsComputation.getAveNumOfCommPerUser(), 0.001);
-        Assert.assertEquals(0.5,statisticsComputation.getAveNumOfCommPerPost(), 0.001);
+        Assert.assertEquals(5, statisticsComputation.getAveNumOfPostPerUser(), 0.001);
+        Assert.assertEquals(2.5, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
+        Assert.assertEquals(0.5, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
+
     @Test
     public void testStatisticsComputationCommMoreThanPosts() {
 
@@ -120,6 +124,7 @@ public class StatisticsComputationTestSuite {
         Assert.assertEquals(5, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
         Assert.assertEquals(2, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
+
     @Test
     public void testStatisticsComputationZeroUsers() {
 
@@ -139,6 +144,7 @@ public class StatisticsComputationTestSuite {
         Assert.assertEquals(0, statisticsComputation.getAveNumOfCommPerUser(), 0.001);
         Assert.assertEquals(0.1, statisticsComputation.getAveNumOfCommPerPost(), 0.001);
     }
+
     @Test
     public void testStatisticsComputation100Users() {
 
@@ -146,7 +152,7 @@ public class StatisticsComputationTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         StatisticsComputation statisticsComputation = new StatisticsComputation();
         List<String> users = new ArrayList<>();
-        for(int n = 0; n < 100; n++){
+        for (int n = 0; n < 100; n++) {
             users.add("user " + n);
         }
         when(statisticsMock.usersNames()).thenReturn(users);

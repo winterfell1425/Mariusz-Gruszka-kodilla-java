@@ -10,7 +10,8 @@ public class ShapeCollector {
 
         myShapes.add(shape);
     }
-    boolean removeFigure(Shape shape){
+
+    boolean removeFigure(Shape shape) {
         boolean result = false;
         if (myShapes.contains(shape)) {
             myShapes.remove(shape);
@@ -22,12 +23,12 @@ public class ShapeCollector {
         //return myShapes.remove(shape);
     }
 
-    Shape getFigure(int n){
+    Shape getFigure(int n) {
         Shape figure = myShapes.get(n);
         return figure;
     }
 
-    void showFigures(){
+    void showFigures() {
         System.out.println("These are my figures: " + myShapes);
     }
 }

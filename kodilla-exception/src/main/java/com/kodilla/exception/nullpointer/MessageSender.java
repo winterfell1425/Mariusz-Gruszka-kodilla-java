@@ -5,7 +5,7 @@ public class MessageSender {
         if (user != null) {
             System.out.println("Sending message: " + message + " to: " + user.getName());
         } else {
-        throw new MessageNotSentException("Object User was null");
+            throw new MessageNotSentException("Object User was null");
         }
     }
 }

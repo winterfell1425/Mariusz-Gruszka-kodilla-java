@@ -6,7 +6,7 @@ public class RouteExceptionRunner {
         FindFlight flightFinder = new FindFlight();
 
         try {
-            boolean result = flightFinder.findFlight(new Flight("Warsaw", "London2"));
+            boolean result = flightFinder.findFlight(new Flight("Warsaw", "London"));
             System.out.println(result);
         } catch (RouteNotFoundException e) {
             System.out.println("No such airport exists in database");
