@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.spring.library.LibraryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-11-28T19:12:46" hostname="youknownothing" time="0.742">
+  <properties/>
+  <testcase name="testSaveToDb" classname="com.kodilla.spring.library.LibraryTestSuite" time="0.415"/>
+  <testcase name="testLoadFromDb" classname="com.kodilla.spring.library.LibraryTestSuite" time="0.296"/>
+  <testcase name="testContext" classname="com.kodilla.spring.library.LibraryTestSuite" time="0.023"/>
+  <system-out><![CDATA[2018-11-28 20:12:46.489  INFO 12996 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kodilla.spring.library.LibraryTestSuite], using SpringBootContextLoader
+2018-11-28 20:12:46.489  INFO 12996 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kodilla.spring.library.LibraryTestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-28 20:12:46.489  INFO 12996 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kodilla.spring.library.LibraryTestSuite]: LibraryTestSuite does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-28 20:12:46.509  INFO 12996 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kodilla.spring.SpringRunner for test class com.kodilla.spring.library.LibraryTestSuite
+2018-11-28 20:12:46.513  INFO 12996 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-28 20:12:46.513  INFO 12996 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@578bd76e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@68ef2a9f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ecc2262, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f64550d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@565dc928, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@47f7aaae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58374f00, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2586b536, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1d2a2c27]
+Saving data to the database.
+Loading data from the database
+===== Beans list: ==== >>
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.context.event.internalEventListenerFactory
+libraryConfig
+library
+libraryDbController
+<< ===== Beans list ====
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-11-22T19:53:38" hostname="youknownothing" time="0.428">
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-11-28T19:12:53" hostname="youknownothing" time="0.397">
   <properties/>
-  <testcase name="testStatisticsComputationZeroComments" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.415"/>
-  <testcase name="testStatisticsComputation1000Posts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.002"/>
-  <testcase name="testStatisticsComputation100Users" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.002"/>
-  <testcase name="testStatisticsComputationCommLessThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.002"/>
-  <testcase name="testStatisticsComputationZeroPosts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.002"/>
+  <testcase name="testStatisticsComputationZeroComments" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.385"/>
+  <testcase name="testStatisticsComputation1000Posts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.001"/>
+  <testcase name="testStatisticsComputation100Users" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.001"/>
+  <testcase name="testStatisticsComputationCommLessThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.001"/>
+  <testcase name="testStatisticsComputationZeroPosts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.001"/>
   <testcase name="testStatisticsComputationZeroUsers" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.001"/>
-  <testcase name="testStatisticsComputationCommMoreThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.002"/>
+  <testcase name="testStatisticsComputationCommMoreThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticsComputationTestSuite" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

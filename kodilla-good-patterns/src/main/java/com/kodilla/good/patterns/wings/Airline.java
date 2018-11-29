@@ -16,24 +16,27 @@ public class Airline {
 
         return airlineFlights;
     }
-    public List <Flight> findFlightFrom(String airport){
+
+    public List<Flight> findFlightFrom(String airport) {
         return getFlights().stream()
-                .filter(f->f.getDepartureAirport().equals(airport))
+                .filter(f -> f.getDepartureAirport().equals(airport))
                 .collect(Collectors.toList());
     }
-    public List <Flight> findFlightTo(String airport){
+
+    public List<Flight> findFlightTo(String airport) {
         return getFlights().stream()
-                .filter(f->f.getArrivalAirport().equals(airport))
+                .filter(f -> f.getArrivalAirport().equals(airport))
                 .collect(Collectors.toList());
     }
-    public List <Flight> findFlightThrough(String from,String via,String to){
+
+    public List<Flight> findFlightThrough(String from, String via, String to) {
         List<Flight> result = getFlights().stream()
-                .filter(f->f.getDepartureAirport().equals(from))
-                .filter(f->f.getArrivalAirport().equals(via))
+                .filter(f -> f.getDepartureAirport().equals(from))
+                .filter(f -> f.getArrivalAirport().equals(via))
                 .collect(Collectors.toList());
         result.addAll(getFlights().stream()
-                .filter(f->f.getDepartureAirport().equals(via))
-                .filter(f->f.getArrivalAirport().equals(to))
+                .filter(f -> f.getDepartureAirport().equals(via))
+                .filter(f -> f.getArrivalAirport().equals(to))
                 .collect(Collectors.toList()));
         return result;
     }
