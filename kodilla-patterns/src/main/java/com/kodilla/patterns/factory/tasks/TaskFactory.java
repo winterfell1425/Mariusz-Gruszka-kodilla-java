@@ -13,8 +13,8 @@ public class TaskFactory {
                 return new PaintingTask("HousePainting", "white", "kitchen");
             case DRIVINGTASK:
                 return new DrivingTask("CabDriving", "an airport", "a cab");
-                default:
-                    return null;
+            default:
+                return null;
         }
     }
 }
