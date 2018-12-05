@@ -19,7 +19,7 @@ public class WorldTestSuite {
 
         Country china = new Country(new BigDecimal("1300000000"), "China");
         Country india = new Country(new BigDecimal("1200000000"), "India");
-        Country bhutan = new Country(new BigDecimal("3000000"), "Togo");
+        Country bhutan = new Country(new BigDecimal("3000000"), "Bhutan");
 
 
         //When

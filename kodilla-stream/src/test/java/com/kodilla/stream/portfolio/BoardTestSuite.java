@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.Month;
 import java.time.Period;
+import java.util.Optional;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 import static java.util.stream.Collectors.toList;
@@ -154,17 +155,19 @@ public class BoardTestSuite {
                 .filter(averageTimeOfInProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .count();
-        System.out.println(tasksCount);
-        // long  daysCount = project.getTaskLists().stream()
-        //  .filter(averageTimeOfInProgressTasks::contains)
-        //.flatMap(tl -> tl.getTasks().stream())
-        //.map(t -> t.getCreated())
-        //.mapToLong(ld->Period.between(LocalDate.),(LocalDate.now()).getDays()
-        //.mapToLong(ld ->ld.until((LocalDate.now()).getDays());
-        //.sum();
-        // System.out.println(daysCount);
 
+        int daysCount = project.getTaskLists().stream()
+                .filter(averageTimeOfInProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .mapToInt(t ->Period.between(t.getCreated(),LocalDate.now()).getDays())
+                .sum();
 
+        double averageDaysOnTask = daysCount / tasksCount;
+
+        //Then
+        Assert.assertEquals(3, tasksCount );
+        Assert.assertEquals(    Optional.of(30), java.util.Optional.ofNullable(daysCount));
+        Assert.assertEquals(10.0, averageDaysOnTask, 0.01);
     }
 }
 

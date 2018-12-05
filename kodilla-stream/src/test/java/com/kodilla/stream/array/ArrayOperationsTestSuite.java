@@ -34,5 +34,6 @@ public class ArrayOperationsTestSuite {
 
         //Then
         Assert.assertEquals(10.5, avg, 0.001);
+
     }
 }
