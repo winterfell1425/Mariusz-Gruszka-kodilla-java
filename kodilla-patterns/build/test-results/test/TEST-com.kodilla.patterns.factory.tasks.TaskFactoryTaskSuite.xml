@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTaskSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-12-10T18:29:59" hostname="youknownothing" time="0.006">
+  <properties/>
+  <testcase name="testFactoryDrivingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTaskSuite" time="0.003"/>
+  <testcase name="testFactoryPaintingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTaskSuite" time="0.001"/>
+  <testcase name="testFactoryShoppingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTaskSuite" time="0.001"/>
+  <system-out><![CDATA[Executing: CabDriving. I am going to drive to an airport with a cab
+Executing: HousePainting. I am going to paint a kitchen white
+Executing: DairyShopping. I am going to buy 2.0 of ' 1-liter bottles of milk'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

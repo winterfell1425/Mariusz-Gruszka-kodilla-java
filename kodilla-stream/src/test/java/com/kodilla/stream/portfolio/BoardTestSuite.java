@@ -161,8 +161,8 @@ public class BoardTestSuite {
         double averageDaysOnTask = daysCount / tasksCount;
 
         //Then
-        Assert.assertEquals(3, tasksCount );
-        Assert.assertEquals(    Optional.of(30), java.util.Optional.ofNullable(daysCount));
+        Assert.assertEquals(3, tasksCount);
+        Assert.assertEquals(30, daysCount);
         Assert.assertEquals(10.0, averageDaysOnTask, 0.01);
     }
 }

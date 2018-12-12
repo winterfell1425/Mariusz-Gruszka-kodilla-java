@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-10T18:29:59" hostname="youknownothing" time="0.047">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.047"/>
+  <system-out><![CDATA[Library{name = 'English Library'}
+   books = 
+[Book{title='A Storm of Swords', author='George Martin', publicationDate=2000-04-05}
+, Book{title='Bleak House', author='Charles Dickens', publicationDate=1853-03-07}
+, Book{title='The Eye of the World', author='Robert Jordan', publicationDate=1990-02-04}
+, Book{title='Empires of The Sea', author='Roger Crowley', publicationDate=2011-11-11}
+]}
+Library{name = 'English Library 2'}
+   books = 
+[Book{title='A Storm of Swords', author='George Martin', publicationDate=2000-04-05}
+, Book{title='Bleak House', author='Charles Dickens', publicationDate=1853-03-07}
+, Book{title='The Eye of the World', author='Robert Jordan', publicationDate=1990-02-04}
+, Book{title='Empires of The Sea', author='Roger Crowley', publicationDate=2011-11-11}
+]}
+Library{name = 'English Library 3'}
+   books = 
+[Book{title='A Storm of Swords', author='George Martin', publicationDate=2000-04-05}
+, Book{title='Bleak House', author='Charles Dickens', publicationDate=1853-03-07}
+, Book{title='The Eye of the World', author='Robert Jordan', publicationDate=1990-02-04}
+, Book{title='World Without End', author='Ken Follett', publicationDate=2007-07-06}
+, Book{title='Empires of The Sea', author='Roger Crowley', publicationDate=2011-11-11}
+]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
