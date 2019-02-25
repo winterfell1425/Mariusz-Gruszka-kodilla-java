@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KodillaSpringWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KodillaSpringWebApplication.class, args);
+      //  SpringApplication.run(KodillaSpringWebApplication.class, args);
     }
 }
