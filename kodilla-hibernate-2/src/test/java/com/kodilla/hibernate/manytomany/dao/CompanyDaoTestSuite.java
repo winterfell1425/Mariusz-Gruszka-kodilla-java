@@ -72,7 +72,7 @@ public class CompanyDaoTestSuite {
         int dataMaestersId = dataMaesters.getId();
         companyDao.save(sofffMatter);
         int greyMatterId = sofffMatter.getId();
-        List<Company>  companiesFound = companyDao.retrieveNameWith3CharsGiven();
+        List<Company>  companiesFound = companyDao.retrieveNameWith3CharsGiven("%sof%");
 
         //Then
         Assert.assertEquals(2, companiesFound.size());
