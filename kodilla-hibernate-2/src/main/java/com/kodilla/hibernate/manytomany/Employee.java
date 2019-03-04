@@ -1,15 +1,19 @@
 package com.kodilla.hibernate.manytomany;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
-
-@NamedQuery(
-        name = "Employee.retrieveLastname",
-        query = "FROM Employee WHERE lastname = :LASTNAME"
-)
-
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.retrieveLastname",
+                query = "FROM Employee WHERE lastname = :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.retrieveLastnameWithCharsGiven",
+                query = "FROM Employee WHERE lastname LIKE :ARG"
+        )
+})
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {

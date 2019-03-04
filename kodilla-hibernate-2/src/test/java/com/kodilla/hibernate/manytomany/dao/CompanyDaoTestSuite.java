@@ -8,9 +8,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import javax.transaction.Transactional;
 import java.util.List;
 
-
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
@@ -57,7 +58,6 @@ public class CompanyDaoTestSuite {
         Assert.assertNotEquals(0, greyMatterId);
 
     }
-
     @Test
     public void testFindCompany() {
         //Given
@@ -67,24 +67,14 @@ public class CompanyDaoTestSuite {
 
         //When
         companyDao.save(softwareMachine);
-        int softwareMachineId = softwareMachine.getId();
         companyDao.save(dataMaesters);
-        int dataMaestersId = dataMaesters.getId();
         companyDao.save(sofffMatter);
-        int greyMatterId = sofffMatter.getId();
+
         List<Company>  companiesFound = companyDao.retrieveNameWith3CharsGiven("%sof%");
 
         //Then
         Assert.assertEquals(2, companiesFound.size());
 
-        //CleanUp
-        try {
-            companyDao.deleteById(softwareMachineId);
-            companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
-        } catch (Exception e) {
-
-       }
     }
     @Test
     public void testFindEmployee() {
@@ -96,28 +86,13 @@ public class CompanyDaoTestSuite {
 
         //When
         employeeDao.save(mikeKovalsky);
-        int mikeKovalskyId = mikeKovalsky.getId();
         employeeDao.save(johnSmith);
-        int johnSmithId = johnSmith.getId();
         employeeDao.save(stephanieClarckson);
-        int stephanieClarcksonId = stephanieClarckson.getId();
         employeeDao.save(lindaKovalsky);
-        int lindaKovalskyId = lindaKovalsky.getId();
 
         List<Employee>  employeesFound = employeeDao.retrieveLastname("Kovalsky");
 
         //Then
         Assert.assertEquals(2,  employeesFound.size());
-
-        //CleanUp
-        try {
-            employeeDao.deleteById(mikeKovalskyId);
-            employeeDao.deleteById(johnSmithId);
-            employeeDao.deleteById(stephanieClarcksonId);
-            employeeDao.deleteById(lindaKovalskyId);
-
-        } catch (Exception e) {
-
-        }
     }
 }
