@@ -131,11 +131,12 @@ public class PizzaTestSuite {
         theOrder = new AnchoisDecorator(theOrder);
         theOrder = new RucolaDecorator(theOrder);
         theOrder = new BaconDecorator(theOrder);
+        theOrder = new MozzarellaCheeseDecorator(theOrder);
         System.out.println("Total order value: $" + theOrder.getCost());
         //When
         BigDecimal theCost = theOrder.getCost();
         //Then
-        assertEquals(new BigDecimal(21), theCost);
+        assertEquals(new BigDecimal(25), theCost);
     }
 
     @Test
@@ -145,11 +146,12 @@ public class PizzaTestSuite {
         theOrder = new BaconDecorator(theOrder);
         theOrder = new AnchoisDecorator(theOrder);
         theOrder = new RucolaDecorator(theOrder);
+        theOrder = new MozzarellaCheeseDecorator(theOrder);
 
         System.out.println(theOrder.getDescription());
         //When
         String description = theOrder.getDescription();
         //Then
-        assertEquals("Neapolitan dough with tomato sauce and mozzarella cheese + bacon + anchois + rucola", description);
+        assertEquals("Neapolitan dough with tomato sauce and mozzarella cheese + bacon + anchois + rucola + mozzarella cheese", description);
     }
 }
