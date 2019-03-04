@@ -147,7 +147,6 @@ public class PizzaTestSuite {
         theOrder = new AnchoisDecorator(theOrder);
         theOrder = new RucolaDecorator(theOrder);
         theOrder = new MozzarellaCheeseDecorator(theOrder);
-
         System.out.println(theOrder.getDescription());
         //When
         String description = theOrder.getDescription();
