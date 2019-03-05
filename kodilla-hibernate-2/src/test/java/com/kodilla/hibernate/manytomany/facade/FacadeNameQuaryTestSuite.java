@@ -1,6 +1,7 @@
-/*package com.kodilla.hibernate.manytomany.facade;
+package com.kodilla.hibernate.manytomany.facade;
 
 import com.kodilla.hibernate.manytomany.Company;
+import com.kodilla.hibernate.manytomany.Employee;
 import com.kodilla.hibernate.manytomany.dao.CompanyDao;
 import com.kodilla.hibernate.manytomany.dao.EmployeeDao;
 import org.junit.Assert;
@@ -12,19 +13,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.transaction.Transactional;
 import java.util.List;
 
-
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class FacadeNameQuaryTestSuite {
     @Autowired
     CompanyDao companyDao;
-    //@Autowired
-    //EmployeeDao employeeDao;
+    @Autowired
+    EmployeeDao employeeDao;
     @Autowired
     RetrieveNameFacade retrieveNameFacade;
 
     @Test
     public void testFacadeFindCompanyName(){
+        //Given
         Company softwareMachine = new Company("Software Machine");
         Company dataMaesters = new Company("Data Maesters");
         Company sofffMatter = new Company("Sofff Matter");
@@ -33,17 +35,27 @@ public class FacadeNameQuaryTestSuite {
         companyDao.save(softwareMachine);
         companyDao.save(dataMaesters);
         companyDao.save(sofffMatter);
+        List<Company> companiesFound = retrieveNameFacade.processQueryForCompany("%ter%");
 
-
-        List<Company> companiesFound = retrieveNameFacade.processQueryForCompany("sof");
-       // } catch (NameRetrievingException e) {
-            //business exception - should be handled in real application
         //Then
         Assert.assertEquals(2, companiesFound.size());
-
-
     }
+    @Test
+    public void testFacadeFindEmployeeName() {
+        //Given
+        Employee mikeKovalsky = new Employee("Mike", "Kovalsky");
+        Employee johnSmith = new Employee("John", "Smith");
+        Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
+        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
 
+        //When
+        employeeDao.save(mikeKovalsky);
+        employeeDao.save(johnSmith);
+        employeeDao.save(stephanieClarckson);
+        employeeDao.save(lindaKovalsky);
+        List<Employee> employeesFound = retrieveNameFacade.processQueryForEmployee("%ith%");
 
-
-}*/
+        //Then
+        Assert.assertEquals(1, employeesFound.size());
+    }
+}

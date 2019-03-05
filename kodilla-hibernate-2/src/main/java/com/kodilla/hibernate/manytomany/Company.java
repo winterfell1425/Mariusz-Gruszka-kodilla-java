@@ -1,6 +1,5 @@
 package com.kodilla.hibernate.manytomany;
 
-
 import org.hibernate.annotations.NamedNativeQuery;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -8,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-                name = "Company.retrieveNameWith3CharsGiven",
+                name = "Company.retrieveNameWithStringGiven",
                 query = "SELECT * FROM COMPANIES" +
-                        " WHERE COMPANY_NAME LIKE :ARG",
+                        " WHERE COMPANY_NAME LIKE CONCAT ('%', :ARG, '%')",
                 resultClass = Company.class
 )
 @Entity
@@ -22,7 +21,6 @@ public class Company {
 
     public Company() {
     }
-
 
     public Company(String name) {
         this.name = name;

@@ -2,17 +2,17 @@ package com.kodilla.hibernate.manytomany;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedQueries({
         @NamedQuery(
                 name = "Employee.retrieveLastname",
                 query = "FROM Employee WHERE lastname = :LASTNAME"
         ),
         @NamedQuery(
-                name = "Employee.retrieveLastnameWithCharsGiven",
-                query = "FROM Employee WHERE lastname LIKE :ARG"
+                name = "Employee.retrieveLastnameWithStringGiven",
+                query = "FROM Employee WHERE lastname LIKE CONCAT('%', :ARG, '%'))"
         )
 })
 @Entity

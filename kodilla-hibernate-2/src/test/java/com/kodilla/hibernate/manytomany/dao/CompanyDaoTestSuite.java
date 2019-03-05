@@ -17,7 +17,6 @@ import java.util.List;
 public class CompanyDaoTestSuite {
     @Autowired
     CompanyDao companyDao;
-
     @Autowired
     EmployeeDao employeeDao;
 
@@ -69,8 +68,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(softwareMachine);
         companyDao.save(dataMaesters);
         companyDao.save(sofffMatter);
-
-        List<Company>  companiesFound = companyDao.retrieveNameWith3CharsGiven("%sof%");
+        List<Company>  companiesFound = companyDao.retrieveNameWithStringGiven("%sof%");
 
         //Then
         Assert.assertEquals(2, companiesFound.size());
@@ -89,7 +87,6 @@ public class CompanyDaoTestSuite {
         employeeDao.save(johnSmith);
         employeeDao.save(stephanieClarckson);
         employeeDao.save(lindaKovalsky);
-
         List<Employee>  employeesFound = employeeDao.retrieveLastname("Kovalsky");
 
         //Then
