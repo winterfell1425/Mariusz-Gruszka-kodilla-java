@@ -24,8 +24,8 @@ public class HomeworkTasksQueue implements Observable {
     }
     @Override
     public void notifyMentors() {
-        for(Observer observer : mentors) {
-            observer.update(this);
+        for(Observer mentor : mentors) {
+            mentor.update(this);
         }
     }
     @Override
