@@ -2,9 +2,7 @@ package com.kodilla.patterns2.adapter.bookclasifier;
 
 import com.kodilla.patterns2.adapter.bookclasifier.librarya.Book;
 import org.junit.Test;
-
 import java.util.HashSet;
-
 import static org.junit.Assert.assertEquals;
 
 public class MedianAdapterTestSuite {
@@ -29,6 +27,5 @@ public class MedianAdapterTestSuite {
         int medianYear = medianAdapter.publicationYearMedian(booksSet);
         //Then
         assertEquals(medianYear, 2000);
-
     }
 }
