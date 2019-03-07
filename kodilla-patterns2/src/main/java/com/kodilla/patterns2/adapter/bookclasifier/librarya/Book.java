@@ -1,7 +1,5 @@
 package com.kodilla.patterns2.adapter.bookclasifier.librarya;
 
-import com.kodilla.patterns2.adapter.bookclasifier.libraryb.BookSignature;
-
 public class Book {
     private final String author;
     private final String title;

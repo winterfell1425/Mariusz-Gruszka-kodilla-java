@@ -11,11 +11,16 @@ public class MedianAdapterTestSuite {
         //Given
         MedianAdapter medianAdapter = new MedianAdapter();
 
-        Book book1 = new Book("Roger Crowley", "Empires of The Sea", 2011, "00001");
-        Book book2 = new Book("Charles Dickens", "Bleak House", 1853, "00002");
-        Book book3 = new Book("Robert Jordan", "The Eye of the World", 1990,"00003");
-        Book book4 = new Book("Ken Follett", "World Without End", 2007,"00004");
-        Book book5 = new Book("George Martin", "A Storm of Swords", 2000,"00005");
+        com.kodilla.patterns2.adapter.bookclasifier.librarya.Book book1 =
+                new com.kodilla.patterns2.adapter.bookclasifier.librarya.Book("Roger Crowley", "Empires of The Sea", 2011, "00001");
+        com.kodilla.patterns2.adapter.bookclasifier.librarya.Book book2 =
+                new com.kodilla.patterns2.adapter.bookclasifier.librarya.Book("Charles Dickens", "Bleak House", 1853, "00002");
+        com.kodilla.patterns2.adapter.bookclasifier.librarya.Book book3 =
+                new com.kodilla.patterns2.adapter.bookclasifier.librarya.Book("Robert Jordan", "The Eye of the World", 1990,"00003");
+        com.kodilla.patterns2.adapter.bookclasifier.librarya.Book book4 =
+                new com.kodilla.patterns2.adapter.bookclasifier.librarya.Book("Ken Follett", "World Without End", 2007,"00004");
+        com.kodilla.patterns2.adapter.bookclasifier.librarya.Book book5 =
+                new com.kodilla.patterns2.adapter.bookclasifier.librarya.Book("George Martin", "A Storm of Swords", 2000,"00005");
 
         HashSet<Book> booksSet = new HashSet<>();
         booksSet.add(book1);
