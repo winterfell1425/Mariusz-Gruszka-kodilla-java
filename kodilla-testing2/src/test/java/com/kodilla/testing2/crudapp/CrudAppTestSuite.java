@@ -71,6 +71,7 @@ public class CrudAppTestSuite {
     }
 
   private boolean checkTaskExistsInTrello(String taskName) throws InterruptedException {
+        driver.switchTo().alert().accept();
         final String TRELLO_URL="https://trello.com/login";
         boolean result = false;
         WebDriver driverTrello=WebDriverConfig.getDriver(WebDriverConfig.CHROME);
@@ -112,13 +113,12 @@ public class CrudAppTestSuite {
                 });
        Thread.sleep(5000);
     }
+
     @Test
     public void shouldCreateTrelloCard() throws InterruptedException {
         String taskName = createCrudAppTestTask();
-        //String taskNameClone = taskName;
-        //sendTestTaskToTrello(taskName);
-        //assertTrue(checkTaskExistsInTrello(taskName));
+        sendTestTaskToTrello(taskName);
+        assertTrue(checkTaskExistsInTrello(taskName));
         deleteCrudAppTestTask(taskName);
-
     }
 }
