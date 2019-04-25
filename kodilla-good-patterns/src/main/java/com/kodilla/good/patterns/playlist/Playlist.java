@@ -5,20 +5,20 @@ import java.util.Collections;
 
 public class Playlist {
 
-    public void playSequentially(ArrayList<String> listToPlay) {
-        for (String name : listToPlay)
+    public void playSequentially(ArrayList<Playable> listToPlay) {
+        for (Playable name : listToPlay)
             System.out.println(name);
     }
 
-    public void playRandomly(ArrayList<String> listToPlay) {
+    public void playRandomly(ArrayList<Playable> listToPlay) {
         Collections.shuffle(listToPlay);
-        for (String name : listToPlay)
+        for (Playable name : listToPlay)
             System.out.println(name);
     }
 
-    public void playInLoop(ArrayList<String> listToPlay) {
+    public void playInLoop(ArrayList<Playable> listToPlay) {
         for (int n = 0; n < 3; n++) {
-            for (String name : listToPlay)
+            for (Playable name : listToPlay)
                 System.out.println(name);
         }
     }
